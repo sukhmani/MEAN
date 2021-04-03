@@ -1,17 +1,11 @@
 {
   "$schema": "./node_modules/@angular/cli/lib/config/schema.json",
-  "cli": {
-    "analytics": "2aecacc0-b74a-4129-a7c4-eadd95b16ce1"
-  },
   "version": 1,
   "newProjectRoot": "projects",
   "projects": {
-    "angular-Invetory-Tasks-CRUD": {
+    "angular-inventory-list": {
       "projectType": "application",
       "schematics": {
-        "@schematics/angular:component": {
-          "style": "scss"
-        },
         "@schematics/angular:application": {
           "strict": true
         }
@@ -23,7 +17,7 @@
         "build": {
           "builder": "@angular-devkit/build-angular:browser",
           "options": {
-            "outputPath": "dist/angular-Invetory-Tasks-CRUD",
+            "outputPath": "dist/angular-inventory-list",
             "index": "src/index.html",
             "main": "src/main.ts",
             "polyfills": "src/polyfills.ts",
@@ -34,7 +28,7 @@
               "src/assets"
             ],
             "styles": [
-              "src/styles.scss"
+              "src/styles.css"
             ],
             "scripts": []
           },
@@ -71,18 +65,18 @@
         "serve": {
           "builder": "@angular-devkit/build-angular:dev-server",
           "options": {
-            "browserTarget": "angular-Invetory-Tasks-CRUD:build"
+            "browserTarget": "angular-inventory-list:build"
           },
           "configurations": {
             "production": {
-              "browserTarget": "angular-Invetory-Tasks-CRUD:build:production"
+              "browserTarget": "angular-inventory-list:build:production"
             }
           }
         },
         "extract-i18n": {
           "builder": "@angular-devkit/build-angular:extract-i18n",
           "options": {
-            "browserTarget": "angular-Invetory-Tasks-CRUD:build"
+            "browserTarget": "angular-inventory-list:build"
           }
         },
         "test": {
@@ -97,7 +91,7 @@
               "src/assets"
             ],
             "styles": [
-              "src/styles.scss"
+              "src/styles.css"
             ],
             "scripts": []
           }
@@ -119,16 +113,16 @@
           "builder": "@angular-devkit/build-angular:protractor",
           "options": {
             "protractorConfig": "e2e/protractor.conf.js",
-            "devServerTarget": "angular-Invetory-Tasks-CRUD:serve"
+            "devServerTarget": "angular-inventory-list:serve"
           },
           "configurations": {
             "production": {
-              "devServerTarget": "angular-Invetory-Tasks-CRUD:serve:production"
+              "devServerTarget": "angular-inventory-list:serve:production"
             }
           }
         }
       }
     }
   },
-  "defaultProject": "angular-Invetory-Tasks-CRUD"
+  "defaultProject": "angular-inventory-list"
 }

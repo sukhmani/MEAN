@@ -20,16 +20,16 @@ describe('AppComponent', () => {
     expect(app).toBeTruthy();
   });
 
-  it(`should have as title 'angular-Invetory-Tasks-CRUD'`, () => {
+  it(`should have as title 'angular-inventory-list'`, () => {
     const fixture = TestBed.createComponent(AppComponent);
     const app = fixture.componentInstance;
-    expect(app.title).toEqual('angular-Invetory-Tasks-CRUD');
+    expect(app.title).toEqual('angular-inventory-list');
   });
 
   it('should render title', () => {
     const fixture = TestBed.createComponent(AppComponent);
     fixture.detectChanges();
     const compiled = fixture.nativeElement;
-    expect(compiled.querySelector('.content span').textContent).toContain('angular-Invetory-Tasks-CRUD app is running!');
+    expect(compiled.querySelector('.content span').textContent).toContain('angular-inventory-list app is running!');
   });
 });
