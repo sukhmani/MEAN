@@ -3,8 +3,8 @@ const app = express();
 
 const mongoose = require('./database/mongoose')
 
-const List = require('./database/models/list');
-const Task = require('./database/models/task');
+const List = require('./database/models/Inventorylist');
+const Task = require('./database/models/Inventorytask');
 
 app.use((req, res, next) => {
 
