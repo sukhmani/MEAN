@@ -5,14 +5,19 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { ComputersComponent } from './computers/computers.component';
 
+import { FormsModule } from '@angular/forms'; // <-- NgModel lives here
+
+
 @NgModule({
   declarations: [
     AppComponent,
-    ComputersComponent
+    ComputersComponent,
+    
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    FormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]
