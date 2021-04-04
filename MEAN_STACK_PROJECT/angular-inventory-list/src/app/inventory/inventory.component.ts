@@ -7,7 +7,10 @@ import { Component, OnInit } from '@angular/core';
 })
 export class InventoryComponent implements OnInit {
 
-  inventoryComputer = 'A';
+  inventoryComputer = {
+    id: 1,
+    name:'A'
+};
 
   constructor() { }
 
