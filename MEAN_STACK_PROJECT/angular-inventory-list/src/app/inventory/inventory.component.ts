@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { inventoryComputer } from '../inventory';
 
 @Component({
   selector: 'app-inventory',

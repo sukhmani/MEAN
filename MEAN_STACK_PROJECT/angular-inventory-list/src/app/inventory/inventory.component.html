@@ -1,6 +1,13 @@
 <p>inventory works!</p>
 {{inventoryComputer}}
 
-<h2>{{inventoryComputer.name}} Details</h2>
+<h2>{{inventoryComputer.name | uppercase}} Details</h2>
 <div><span>id: </span>{{inventoryComputer.id}}</div>
 <div><span>name: </span>{{inventoryComputer.name}}</div>
+
+
+<div>
+    <label>name:
+      <input [(ngModel)]="inventoryComputer.name" placeholder="name"/>
+    </label>
+  </div>
