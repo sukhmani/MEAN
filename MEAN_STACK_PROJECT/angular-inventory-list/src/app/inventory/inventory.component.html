@@ -1,6 +1,8 @@
 <p>inventory works!</p>
 {{inventoryComputer}}
 
+
+
 <h2>{{inventoryComputer.name | uppercase}} Details</h2>
 <div><span>id: </span>{{inventoryComputer.id}}</div>
 <div><span>name: </span>{{inventoryComputer.name}}</div>
@@ -11,3 +13,13 @@
       <input [(ngModel)]="inventoryComputer.name" placeholder="name"/>
     </label>
   </div>
+
+  <h2>{{inventoryComputer.name | uppercase}} Details</h2>
+<div><span>id: </span>{{inventoryComputer.id}}</div>
+
+<h2>Computer Inventory</h2>
+<ul class="inventory">
+  <li>
+    <span class="badge">{{inventoryComputer.id}}</span> {{inventoryComputer.name}}
+  </li>
+  <li *ngFor="let inventoryComputer of inventory">

@@ -1,4 +1,4 @@
-export interface inventoryComputer {
+export interface inventoryComputer  {
     id: number;
     name: string;
   }
