@@ -10,7 +10,7 @@ import { INVENTORY } from '../mock-inventory';
 })
 export class InventoryComponent implements OnInit {
 
-  inventoryComputer = {
+  inventoryComputer  = {
     id: 1,
     name:'A'
 
