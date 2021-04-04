@@ -52,4 +52,18 @@ app.patch('/lists/:listId', (req, res) => {
 })
 
 
+app.get('http://localhost:3000/lists/:listId/tasks',(req,res) => {
+        Task.find({ _listId: req.params.listId})
+        .then((tasks) => res.send(tasks))
+        .catch((error) => console.log(error));
+
+})
+
+app.post('http://localhost:3000/lists/:listId/tasks',(req,res) => {
+        Task.find({ _listId: req.params.listId})
+        .then((tasks) => res.send(tasks))
+        .catch((error) => console.log(error));
+
+})
+
 app.listen(3000, () => console.log("Server connected on port 3000"));
