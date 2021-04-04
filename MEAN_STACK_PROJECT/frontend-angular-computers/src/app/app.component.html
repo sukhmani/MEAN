@@ -3,5 +3,15 @@
 
 <router-outlet></router-outlet>
 <h1>{{title}}</h1>
-<h1>{{title}}</h1>
+
 <app-computers></app-computers>
+<router-outlet></router-outlet>
+<nav>
+    <a routerLink="/computers">Computers</a>
+  </nav>
+  <nav>
+    <a class="button" routerLink="/Create">Add/ Create</a> |
+    <a class="button" routerLink="/Read">Check Available Computers</a>|
+    <a class="button" routerLink="/Update">Make updates to the Inventory</a> |
+    <a class="button" routerLink="/Delete">Delete</a>
+  </nav>
