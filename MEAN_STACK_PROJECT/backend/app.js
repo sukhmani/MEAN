@@ -23,10 +23,10 @@ async function run() {
     const computer = database.collection('computer');
 
     // Query for a computer that has the title 'B'
-    const query = { title: 'c' };
+    const query = { name: 'c' };
     const computer1 = await computer.findOne(query);
 
-    console.log(computer);
+    console.log(computer1);
   } finally {
     // Ensures that the client will close when you finish/error
     await client.close();
@@ -48,8 +48,8 @@ async function run1() {
     // create an array of documents to insert
     const docs = [
       { name: "Reaaad", town: "alk" },
-      { name: "Balue", town: "aKl" },
-      { name: "Laeon", town: "aGa" }
+      { name: "d", town: "aKl" },
+      { name: "c", town: "aGa" }
     ];
 
     // this option prevents additional documents from being inserted if one fails
