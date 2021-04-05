@@ -48,7 +48,7 @@ async function run1() {
     // create an array of documents to insert
     const docs = [
       { name: "Reaaad", town: "alk" },
-      { name: "d", town: "aKl" },
+      { name: "a", town: "aKl" },
       { name: "c", town: "aGa" }
     ];
 
@@ -62,3 +62,22 @@ async function run1() {
   }
 }
 run1().catch(console.dir);
+
+/*
+async function run2() {
+    try {
+      await client.connect();
+      const database = client.db('computerdata');
+      const computer2 = database.collection('computer');
+      // Query for a movie that has a title of type string
+      const query = { name: 'c' };
+      const result1 = await computer2.deleteOne(query);
+    
+        console.log(result1);
+    
+    } finally {
+      await client.close();
+    }
+  }
+  run2().catch(console.dir);
+  */
