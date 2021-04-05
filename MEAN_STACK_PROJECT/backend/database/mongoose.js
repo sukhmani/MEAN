@@ -42,9 +42,9 @@ async function run1() {
 
     // create an array of documents to insert
     const docs = [
-      { name: "Reaaad", town: "alk" },
-      { name: "a", town: "aKl" },
-      { name: "c", town: "aGa" }
+      { name: "Reaaad", town: "alk", version: "q" },
+      { name: "a", town: "aKl", version: "w" },
+      { name: "c", town: "aGa" , version: "e"}
     ];
 
     // this option prevents additional documents from being inserted if one fails
