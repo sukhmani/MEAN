@@ -44,7 +44,7 @@ async function run1() {
     const docs = [
       { name: "Reaaad", town: "alk", version: "q" },
       { name: "a", town: "aKl", version: "w" },
-      { name: "c", town: "aGa" , version: "e"}
+      { name: "c", town: "aGa" , version: "e", quantity: "4"}
     ];
 
     // this option prevents additional documents from being inserted if one fails
