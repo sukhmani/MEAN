@@ -9,7 +9,7 @@ import { FormsModule } from '@angular/forms';
 import { CreateComponent } from './create/create.component';
 import { ReadComponent } from './read/read.component';
 import { UpdateComponent } from './update/update.component';
-import { DeleteComponent } from './delete/delete.component'; // <-- NgModel lives here
+import { DeleteComponent } from './delete/delete.component'; 
 
 
 @NgModule({

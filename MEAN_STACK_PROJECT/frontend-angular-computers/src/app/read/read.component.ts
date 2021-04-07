@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+// import { COMPUTERSS } from '../mock-computers';
 
 @Component({
   selector: 'app-read',
