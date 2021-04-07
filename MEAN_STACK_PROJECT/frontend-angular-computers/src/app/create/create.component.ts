@@ -13,13 +13,19 @@ export class CreateComponent  {
   type = ['A', 'B',
   'C', 'D'];
 
-computer = new create(9, 'new computer', this.type[0], 'lkj');
+  Version = ['1', '2',
+  '3', '4'];
+
+  Memory = ['1', '2',
+  '3', '4'];
+
+mod = new create(9, 'new computer', this.type[0], 'lkj','');
 
 submitted = false;
 
 onSubmit() { this.submitted = true; }
 
 // TODO: Remove this when we're done
-get diagnostic() { return JSON.stringify(this.computer); }
+get diagnostic() { return JSON.stringify(this.mod); }
 
 }

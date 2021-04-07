@@ -4,7 +4,7 @@
 <label for="name">Computer Name: </label>
 <input type="text" class="form-control" id="name"
        required
-       [(ngModel)]="computer.name" name="name"
+       [(ngModel)]="mod.name" name="name"
        #name="ngModel">
 <div [hidden]="name.valid || name.pristine"
      class="alert alert-danger">
@@ -18,3 +18,16 @@
     </select>
   </div>
 
+  <div class="form-group">
+    <label for="Version">Computer Version: </label>
+    <select class="form-control" id="Version" required>
+      <option *ngFor="let vr of Version" [value]="vr">{{vr}}</option>
+    </select>
+  </div>
+
+  <div class="form-group">
+    <label for="Memory">Computer Memory: </label>
+    <select class="form-control" id="Memory" required>
+      <option *ngFor="let mem of Memory" [value]="mem">{{mem}}</option>
+    </select>
+  </div>
