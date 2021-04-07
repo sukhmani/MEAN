@@ -1,15 +1,25 @@
 import { Component, OnInit } from '@angular/core';
 
+import { create } from './create';
+
+
 @Component({
   selector: 'app-create',
   templateUrl: './create.component.html',
   styleUrls: ['./create.component.css']
 })
-export class CreateComponent implements OnInit {
+export class CreateComponent  {
 
-  constructor() { }
+  type = ['A', 'B',
+  'C', 'D'];
 
-  ngOnInit(): void {
-  }
+computer = new create(9, 'new computer', this.type[0], 'lkj');
+
+submitted = false;
+
+onSubmit() { this.submitted = true; }
+
+// TODO: Remove this when we're done
+get diagnostic() { return JSON.stringify(this.computer); }
 
 }
