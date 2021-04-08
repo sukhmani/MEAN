@@ -7,4 +7,8 @@ import { HttpClient } from '@angular/common/http';
 export class AppServiceService {
 
   constructor(private http: HttpClient) { }
+
+  getData(){
+    return this.http.get('api/getData')
+  }
 }
