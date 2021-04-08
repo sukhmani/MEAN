@@ -11,6 +11,13 @@ app.use(cors({
     ]
 }))
 
+app.get('/getData', (req,res)=>{
+    res.json({
+        "statusCode":200,
+        "statusMessage":"success"
+    })
+})
+
 app.use(express.json());
 app.listen(3000,() => console.log("Server connected on port 3000"));
 
