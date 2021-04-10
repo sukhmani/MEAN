@@ -2,7 +2,7 @@
 const { MongoClient } = require("mongodb");
 const computer = require("./models/computer");
 
-// Replace the uri string with your MongoDB deployment's connection string.
+
 
 const uri = "mongodb+srv://u2:p2@cluster0.b4isx.mongodb.net/computerdata?retryWrites=true&w=majority";
 
@@ -24,7 +24,7 @@ async function run() {
 
     console.log(computer1);
   } finally {
-    // Ensures that the client will close when you finish/error
+    // Eclient will close when  done
     await client.close();
   }
 }
@@ -98,7 +98,7 @@ exports.index = function (req, res) {
 
 // Handle create computer
 exports.new = function (req, res) {
-  var contact = new Computer();
+  var computer = new Computer();
   computer.name = req.body.name ? req.body.name : computer.name;
   computer.memory = req.body.memory;
   computer.version = req.body.version;

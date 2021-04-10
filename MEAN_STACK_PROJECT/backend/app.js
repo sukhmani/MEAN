@@ -5,7 +5,7 @@ let bodyParser = require('body-parser');
 const mongoose = require('./database/mongoose');
 const computer = require('./database/models/computer');
 let apiRoutes = require('./api-routes');
-//var db = mongoose.connection;
+
 
 var cors = require('express-cors');
 app.use('/api', apiRoutes);
