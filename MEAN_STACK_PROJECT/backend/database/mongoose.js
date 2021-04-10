@@ -1,5 +1,6 @@
 
 const { MongoClient } = require("mongodb");
+const computer = require("./models/computer");
 
 // Replace the uri string with your MongoDB deployment's connection string.
 
@@ -18,7 +19,7 @@ async function run() {
     const computer = database.collection('computer');
 
     // Query for a computer that has the title 'B'
-    const query = { name: 'c' };
+    const query = { name: 'a' };
     const computer1 = await computer.findOne(query);
 
     console.log(computer1);
@@ -42,9 +43,9 @@ async function run1() {
 
     // create an array of documents to insert
     const docs = [
-      { name: "Reaaad", town: "alk", version: "q" },
-      { name: "a", town: "aKl", version: "w" },
-      { name: "c", town: "aGa" , version: "e", quantity: "4"}
+      { name: "Reaaad", memory: "alk", version: "q" },
+      { name: "a", memory: "aKl", version: "w" },
+      { name: "c", memory: "aGa" , version: "1", quantity: "5"}
     ];
 
     // this option prevents additional documents from being inserted if one fails
@@ -76,3 +77,39 @@ async function run2() {
   }
   run2().catch(console.dir);
   */
+
+  
+exports.index = function (req, res) {
+  computer.get(function (err, computer) {
+      if (err) {
+          res.json({
+              status: "error",
+              message: err,
+          });
+      }
+      res.json({
+          status: "success in handling index",
+          message: "Computer found",
+          data: computer
+      });
+  });
+};
+
+
+// Handle create computer
+exports.new = function (req, res) {
+  var contact = new Computer();
+  computer.name = req.body.name ? req.body.name : computer.name;
+  computer.memory = req.body.memory;
+  computer.version = req.body.version;
+  computer.quantity = req.body.quantity;
+// save the contact and check for errors
+  computer.save(function (err) {
+      // if (err)
+      //     res.json(err);
+res.json({
+          message: 'New computer added',
+          data: computer
+      });
+  });
+};
