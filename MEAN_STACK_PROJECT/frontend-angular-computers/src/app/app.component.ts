@@ -1,31 +1,10 @@
-import { Component, OnInit } from '@angular/core';
-import { AppServiceService } from './app-service.service';
+import { Component } from '@angular/core';
 
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.css']
 })
-export class AppComponent implements OnInit {
+export class AppComponent {
   title = 'Computer Inventory ';
-
-  constructor(private service : AppServiceService){
-
-  }
-
-  ngOnInit(){
-    this.getDataFromAPI();
-  }
-
-getDataFromAPI(){
-  this.service.getData().subscribe((response) => {
-    console.log('Response is:',response)
-
-  }, (error) => {
-    console.log('error is',error);
-    
-  })
-  
-  
-}
 }
