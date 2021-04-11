@@ -1,5 +1,6 @@
 
 const { MongoClient } = require("mongodb");
+const { Mongoose } = require("mongoose");
 const computer = require("./models/computer");
 
 
@@ -113,3 +114,4 @@ res.json({
       });
   });
 };
+
