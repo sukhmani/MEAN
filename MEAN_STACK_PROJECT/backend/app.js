@@ -11,6 +11,12 @@ app.use(cors({
     ]
 }))
 
+app.get('/', (req,res)=>{
+    res.json({
+        "statusCode":200,
+        "statusMessage":"Hello Hi"
+    })
+})
 
 
 
