@@ -28,6 +28,7 @@ app.use(cors({
 
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 app.get('/getData', (req,res)=>{
     res.json({
@@ -51,6 +52,8 @@ else
     console.log(" connected!")
 
 
+=======
+>>>>>>> parent of 528cc55 (created endpoint)
 =======
 >>>>>>> parent of 528cc55 (created endpoint)
 =======
