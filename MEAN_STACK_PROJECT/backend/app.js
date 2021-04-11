@@ -14,7 +14,7 @@ app.use(cors({
 
 
 
->>>>>>> parent of 23c6450 (revert to the endpoint)
+
 app.get('/getData', (req,res)=>{
     res.json({
         "statusCode":200,
