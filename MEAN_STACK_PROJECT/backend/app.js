@@ -11,11 +11,8 @@ app.use(cors({
     ]
 }))
 
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
+
+
 
 >>>>>>> parent of 23c6450 (revert to the endpoint)
 app.get('/getData', (req,res)=>{
