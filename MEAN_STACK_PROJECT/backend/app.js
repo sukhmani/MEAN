@@ -51,13 +51,6 @@ if(!mongoose)
 else
     console.log(" connected!")
 
-
-=======
->>>>>>> parent of 528cc55 (created endpoint)
-=======
->>>>>>> parent of 528cc55 (created endpoint)
-=======
->>>>>>> parent of 528cc55 (created endpoint)
 app.use(express.json());
 app.listen(3000,() => console.log("Server connected on port 3000"));
 
