@@ -1,33 +1,27 @@
 
 const express = require('express');
 const app = express();
-let bodyParser = require('body-parser');
 const mongoose = require('./database/mongoose');
+<<<<<<< HEAD
 const computer = require('./database/models/computer');
 let apiRoutes = require('./api-routes');
 
+=======
+>>>>>>> parent of 6952423 (database connection check - working)
 
-var cors = require('express-cors');
-app.use('/api', apiRoutes);
-
-// C bodyparser to handle post req
-app.use(bodyParser.urlencoded({
-    extended: true
- }));
+var cors = require('express-cors')
  
-
-app.use(bodyParser.json());
-
-app.get('/', (req, res) => res.send(' Express: Default URL'));
-
 app.use(cors({
     allowedOrigins: [
         'github.com', 'google.com'
     ]
 }))
 
+<<<<<<< HEAD
 
 
+=======
+>>>>>>> parent of 6952423 (database connection check - working)
 app.get('/getData', (req,res)=>{
     res.json({
         "statusCode":200,
@@ -35,6 +29,7 @@ app.get('/getData', (req,res)=>{
     })
 })
 
+<<<<<<< HEAD
 
 app.get('/computer', (req,res)=>{
     res.json({
@@ -49,6 +44,8 @@ if(!mongoose)
 else
     console.log(" connected!")
 
+=======
+>>>>>>> parent of 6952423 (database connection check - working)
 app.use(express.json());
 app.listen(3000,() => console.log("Server connected on port 3000"));
 
