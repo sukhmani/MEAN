@@ -26,9 +26,7 @@ app.use(cors({
     ]
 }))
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
+
 
 app.get('/getData', (req,res)=>{
     res.json({
