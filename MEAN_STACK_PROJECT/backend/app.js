@@ -17,7 +17,7 @@ app.post('/create-button', (req, res) => {
     console.log(req.body);
     
 
-    return res.status(200).json({message: `${postObj.name} Post is created successfully..`})
+    return res.status(200).json({message: `${postCreateObj.name} created successfully..`})
 })
 
 app.use(express.urlencoded());
