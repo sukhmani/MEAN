@@ -2,6 +2,8 @@
 const express = require('express');
 const app = express();
 const mongoose = require('./database/mongoose');
+const inventory = require('./database/models/inventory')
+const computer = require('./database/models/computer')
 
 var cors = require('express-cors')
  
