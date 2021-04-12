@@ -2,8 +2,8 @@
 const express = require('express');
 const app = express();
 const mongoose = require('./database/mongoose');
+const computer = require('./database/models/computer');
 const inventory = require('./database/models/inventory')
-const computer = require('./database/models/computer')
 
 var cors = require('express-cors')
  
@@ -27,14 +27,16 @@ app.post('/create-button', (req, res) => {
 app.use(express.urlencoded());
 app.use(express.json());
 
-app.get('/', (req,res)=>{
-    res.json({
-        "statusCode":200,
-        "statusMessage":"Hello Hi"
-    })
-})
+/*
 
+app.get('/inventory', (req,res)=>{
+    inventory.find({})
+    .then(computer => res.send(computer))
+    .catch((error) => console.log(error));
+   
+});
 
+*/
 
 
 app.get('/getData', (req,res)=>{

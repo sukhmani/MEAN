@@ -2,6 +2,7 @@
 const { MongoClient } = require("mongodb");
 const  mongoose  = require("mongoose");
 const computer = require("./models/computer");
+const inventory = require("./models/inventory")
 
 mongoose.Promise =global.Promise;
 
@@ -19,6 +20,7 @@ async function run() {
 
     const database = client.db('computerdata');
     const computer = database.collection('computer');
+    
 
     // Query for a computer that has the title 'B'
     const query = { name: 'a' };
@@ -60,6 +62,9 @@ async function run1() {
   }
 }
 run1().catch(console.dir);
+
+
+
 
 /*
 async function run2() {
@@ -115,5 +120,10 @@ res.json({
       });
   });
 };
+
+
+
+
+
 
 module.exports = mongoose;

@@ -7,15 +7,17 @@ const inventorySchema = new mongoose.Schema({
     },
    
     InStock:{
-        type: Boolean,
-        default: false,
-        required: true
+        type: String
+        
     }
 }
 );
 
 //const computer = mongoose.model('computer',computerSchema);
 
-const inventory = mongoose.model('inventory', inventorySchema)
+var inventory = mongoose.model('inventory', inventorySchema);
 
+module.exports.get = function (callback, limit) {
+    inventory.find(callback).limit(limit);
+}
 module.exports = inventory;
