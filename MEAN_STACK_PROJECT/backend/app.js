@@ -1,7 +1,7 @@
 
 const express = require('express');
 const app = express();
-
+const bodyParser = require('body-parser');
 
 const mongoose = require('./database/mongoose');
 const computer = require('./database/models/computer');
