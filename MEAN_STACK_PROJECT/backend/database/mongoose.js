@@ -3,7 +3,7 @@ const { MongoClient } = require("mongodb");
 const  mongoose  = require("mongoose");
 const computer = require("./models/computer");
 const inventory = require("./models/inventory")
-
+const bodyParser = require('body-parser');
 mongoose.Promise =global.Promise;
 
 

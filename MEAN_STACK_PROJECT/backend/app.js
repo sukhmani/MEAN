@@ -1,6 +1,8 @@
 
 const express = require('express');
 const app = express();
+
+
 const mongoose = require('./database/mongoose');
 const computer = require('./database/models/computer');
 const inventory = require('./database/models/inventory')
@@ -38,6 +40,7 @@ app.get('/inventory', (req,res)=>{
 
 */
 
+app.get('/inventory',computer.findOne);
 
 app.get('/getData', (req,res)=>{
     res.json({
