@@ -1,8 +1,9 @@
 
 const { MongoClient } = require("mongodb");
-const { Mongoose } = require("mongoose");
+const  mongoose  = require("mongoose");
 const computer = require("./models/computer");
 
+mongoose.Promise =global.Promise;
 
 
 const uri = "mongodb+srv://u2:p2@cluster0.b4isx.mongodb.net/computerdata?retryWrites=true&w=majority";
@@ -115,3 +116,4 @@ res.json({
   });
 };
 
+module.exports = mongoose;
