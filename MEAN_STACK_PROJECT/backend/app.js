@@ -11,6 +11,18 @@ app.use(cors({
     ]
 }))
 
+
+app.post('/create-button', (req, res) => {
+    let postCreateObj = {...req.body}
+    console.log(req.body);
+    
+
+    return res.status(200).json({message: `${postObj.name} Post is created successfully..`})
+})
+
+app.use(express.urlencoded());
+app.use(express.json());
+
 app.get('/', (req,res)=>{
     res.json({
         "statusCode":200,
@@ -28,7 +40,7 @@ app.get('/getData', (req,res)=>{
     })
 })
 
-app.use(express.json());
+
 app.listen(3000,() => console.log("Server connected on port 3000"));
 
 
