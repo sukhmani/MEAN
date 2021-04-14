@@ -1,28 +1,6 @@
-
-<br>
-
-<form name="myForm" ng-controller="DateController">
-    <label for="dateInput">Purchase Date:</label>
-    <input type="date" id="dateInput" name="input" ng-model="date.value"
+<p>delete works!</p>
+<form name="myForm" ng-controller="DateController as dateCtrl">
+    <label for="dateInput">PurchaseDate:</label>
+    <input type="date" id="dateInput" name="input" ng-model="example.value"
         placeholder="yyyy-MM-dd" min="2016-01-01" max="2021-12-31" required />
-<br>
-<br>
-        <label>Email:
-            <input type="email" name="input" ng-model="email.text" required>
-          </label>
         </form>
-<!-- 
-        <button class="delete" title="delete "
-  (click)="delete(id)">x</button>
-
-  
-  <ul class="delete1">
-    <li *ngFor="let computer of computers">
-      <a routerLink="/delete/{{mod.id}}">
-        <span class="badge">{{mod.id}}</span> {{computer.name}}
-      </a>
-      <button class="delete" title="delete "
-        (click)="delete">x</button>
-    </li>
-  </ul>
--->
