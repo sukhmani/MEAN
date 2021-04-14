@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { create } from '../create/create';
+import { HttpClientModule } from '@angular/common/http';
 
 @Component({
   selector: 'app-delete',
@@ -11,5 +13,5 @@ export class DeleteComponent implements OnInit {
 
   ngOnInit(): void {
   }
-
+ 
 }

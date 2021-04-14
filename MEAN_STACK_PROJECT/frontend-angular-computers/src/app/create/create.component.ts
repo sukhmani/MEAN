@@ -31,7 +31,7 @@ onSubmit() { this.submitted = true; }
 get diagnostic() { return JSON.stringify(this.mod); }
 
 create() {
-  //this.mod = new create(42, '', '','','');
+  
   this.httpClient.post('http://localhost:3000/create-button', this.mod)
   .subscribe( response => {
     console.log(response);

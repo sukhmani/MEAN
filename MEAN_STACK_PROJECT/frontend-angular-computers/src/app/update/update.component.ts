@@ -8,7 +8,7 @@ import { update } from './update';
   styleUrls: ['./update.component.css']
 })
 export class UpdateComponent  {
-
+id = [1];
   type = ['A', 'B',
   'C', 'D'];
 
@@ -18,7 +18,7 @@ export class UpdateComponent  {
   Memory = ['1', '2',
   '3', '4'];
 
-mod = new update(9, 'new computer', this.type[0], 'lkj','');
+mod = new update(this.id[0], 'new computer', this.type[0], 'lkj',this.Memory[1]);
 
 submitted = false;
 
@@ -28,7 +28,7 @@ onSubmit() { this.submitted = true; }
 get diagnostic() { return JSON.stringify(this.mod); }
 constructor(private httpClient: HttpClient){}
 update() {
-  //this.mod = new create(42, '', '','','');
+  
   this.httpClient.post('http://localhost:3000/update-button', this.mod)
   .subscribe( response => {
     console.log(response);
