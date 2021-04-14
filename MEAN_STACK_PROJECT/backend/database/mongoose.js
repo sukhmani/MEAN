@@ -61,7 +61,7 @@ async function run1() {
     await client.close();
   }
 }
-// run1().catch(console.dir);
+run1().catch(console.dir);
 
 
 const options = {
