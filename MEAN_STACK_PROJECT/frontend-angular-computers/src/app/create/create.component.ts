@@ -10,7 +10,7 @@ import { create } from './create';
   styleUrls: ['./create.component.css']
 })
 export class CreateComponent  {
-
+  id = [1];
   type = ['A', 'B',
   'C', 'D'];
 
@@ -21,7 +21,7 @@ export class CreateComponent  {
   '3', '4'];
   
 constructor(private httpClient: HttpClient){}
-mod = new create(9, 'new computer', this.type[0], 'lkj','');
+mod = new create(9, 'name', this.type[0], 'lkj','id');
 
 submitted = false;
 
