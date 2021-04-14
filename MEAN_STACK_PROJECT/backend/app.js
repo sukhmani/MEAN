@@ -18,13 +18,16 @@ app.use(cors({
 }))
 
 
-app.post('/create-button', (req, res) => {
+app.post('/create-button', (req, res,next) => {
+    res.header("Access-Control-Allow-Origin","*");
+    res.header ("Access-Control-Allow-Headers", "Origin, X-Requested-With, Content-Type,AcceptSS")
     let postCreateObj = {...req.body}
     console.log(req.body);
-    
-
+res.header('Access-Control-Allow-Methods','GET,PUT,POST,DELETE ');
     return res.status(200).json({message: `${postCreateObj.name} created successfully..`})
 })
+
+
 
 
 
@@ -43,6 +46,8 @@ app.get('/inventory', (req,res)=>{
 */
 
 app.get('/inventory',computer.findOne);
+
+
 
 app.get('/getData', (req,res)=>{
     res.json({

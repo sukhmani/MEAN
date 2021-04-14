@@ -19,4 +19,3 @@ module.exports.get = function (callback, limit) {
     computer.find(callback).limit(limit);
 }
 
-module.exports = computer;
