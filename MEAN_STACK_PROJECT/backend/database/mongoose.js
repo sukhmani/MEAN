@@ -61,9 +61,27 @@ async function run1() {
     await client.close();
   }
 }
-run1().catch(console.dir);
+// run1().catch(console.dir);
 
 
+const options = {
+  useUnifiedTopology: true,
+  useNewUrlParser: true,
+  retryWrites: true,
+  useCreateIndex: true,
+  useFindAndModify: false,
+  w: 'majority',
+};
+
+connectToDb = async function () {
+  try {
+      mongoose.connect(`${uri}`, options);
+      console.log(`Database connected..`);
+  } catch (e) {
+      console.log("db connection error", e);
+      process.exit(1);
+  }
+};
 
 
 /*
@@ -122,8 +140,11 @@ res.json({
 };
 
 
+module.exports = {
+  connectToDb
+
+};
 
 
 
 
-module.exports = mongoose;

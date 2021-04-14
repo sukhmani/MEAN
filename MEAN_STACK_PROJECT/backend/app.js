@@ -9,20 +9,32 @@ app.use(cors())
 
 const mongoose = require('./database/mongoose');
 const computer = require('./database/models/computer');
-const inventory = require('./database/models/inventory')
-
-
- 
+const inventory = require('./database/models/inventory');
 
 
 
-app.post('/create-button', (req, res,next) => {
+
+
+
+
+app.post('/create-button', async (req, res,next) => {
     res.header("Access-Control-Allow-Origin","*");
     res.header ("Access-Control-Allow-Headers", "Origin, X-Requested-With, Content-Type,AcceptSS")
     let postCreateObj = {...req.body}
     console.log(req.body);
+
+    try{
+
+        const result = await computer.create(postCreateObj);
+    
+            console.log(result);
+        }catch(e){console.log('e', e);}
+    
+
 res.header('Access-Control-Allow-Methods','GET,PUT,POST,DELETE ');
     return res.status(200).json({message: `${postCreateObj.name} created successfully..`})
+    
+    
 })
 
 
@@ -33,6 +45,7 @@ app.post('/update-button', (req, res,next) => {
     console.log(req.body);
 res.header('Access-Control-Allow-Methods','GET,PUT,POST,DELETE ');
     return res.status(200).json({message: `${postUpdateObj.name} updated successfully..`})
+
 })
 
 
@@ -61,7 +74,14 @@ app.get('/getData', (req,res)=>{
     })
 })
 
+async function startServer() {
 
-app.listen(3000,() => console.log("Server connected on port 3000"));
+    await connectToDb();
+    
+    app.listen(3000,() => console.log("Server connected on port 3000"));
+    }
+    startServer();
+    
+
 
 
