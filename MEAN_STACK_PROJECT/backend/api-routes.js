@@ -17,11 +17,11 @@ router.route('./models/computer')
     .get(mongoose.index)
    .post(mongoose.new);
  router.route('/computer/:computer_id')
-    /*.get(mongoose.view)
+    .get(mongoose.view)
     .patch(mongoose.update)
     .put(mongoose.update)
     .delete(mongoose.delete);
-    */
+    
 
 
 
