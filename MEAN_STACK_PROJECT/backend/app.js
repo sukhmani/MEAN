@@ -26,7 +26,14 @@ res.header('Access-Control-Allow-Methods','GET,PUT,POST,DELETE ');
 })
 
 
-
+app.post('/update-button', (req, res,next) => {
+    res.header("Access-Control-Allow-Origin","*");
+    res.header ("Access-Control-Allow-Headers", "Origin, X-Requested-With, Content-Type,AcceptSS")
+    let postUpdateObj = {...req.body}
+    console.log(req.body);
+res.header('Access-Control-Allow-Methods','GET,PUT,POST,DELETE ');
+    return res.status(200).json({message: `${postUpdateObj.name} updated successfully..`})
+})
 
 
 app.use(express.urlencoded());

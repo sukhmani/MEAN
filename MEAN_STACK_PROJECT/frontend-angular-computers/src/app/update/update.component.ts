@@ -1,3 +1,4 @@
+import { HttpClient } from '@angular/common/http';
 import { Component, OnInit } from '@angular/core';
 import { update } from './update';
 
@@ -25,8 +26,12 @@ onSubmit() { this.submitted = true; }
 
 
 get diagnostic() { return JSON.stringify(this.mod); }
-
+constructor(private httpClient: HttpClient){}
 update() {
-  this.mod = new update(42, '', '','','');
+  //this.mod = new create(42, '', '','','');
+  this.httpClient.post('http://localhost:3000/update-button', this.mod)
+  .subscribe( response => {
+    console.log(response);
+  });
 }
 }

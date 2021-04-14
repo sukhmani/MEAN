@@ -1,3 +1,4 @@
+import { HttpClient } from '@angular/common/http';
 import { Component, OnInit } from '@angular/core';
 // import { COMPUTERSS } from '../mock-computers';
 
@@ -6,6 +7,8 @@ import { Component, OnInit } from '@angular/core';
   templateUrl: './read.component.html',
   styleUrls: ['./read.component.css']
 })
+
+
 export class ReadComponent implements OnInit {
 
   constructor() { }
