@@ -21,7 +21,7 @@ export class CreateComponent  {
   '3', '4'];
   
 constructor(private httpClient: HttpClient){}
-mod = new create(9, 'name', this.type[0], 'lkj','id');
+mod = new create(9, 'name', this.Version[2], 'lkj','id');
 
 submitted = false;
 

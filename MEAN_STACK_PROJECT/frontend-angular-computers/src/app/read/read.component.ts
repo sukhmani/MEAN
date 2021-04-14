@@ -11,7 +11,10 @@ import { Component, OnInit } from '@angular/core';
 
 export class ReadComponent implements OnInit {
 
-  constructor() { }
+
+  constructor() {
+  
+   }
 
   ngOnInit(): void {
   }
