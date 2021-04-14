@@ -1,4 +1,4 @@
-<p>create works!</p>
+
 
 
 <label for="name">Computer Name: </label>
@@ -6,30 +6,33 @@
        required
        [(ngModel)]="mod.name" name="name"
        #name="ngModel">
+       <br>
 <div [hidden]="name.valid || name.pristine"
      class="alert alert-danger">
   
 </div>
-
+<br>
 <div class="form-group">
     <label for="type">Computer Type: </label>
     <select class="form-control" id="type" required>
       <option *ngFor="let ty of type" [value]="ty">{{ty}}</option>
     </select>
   </div>
-
+<br>
   <div class="form-group">
     <label for="Version">Computer Version: </label>
     <select class="form-control" id="Version" required>
       <option *ngFor="let vr of Version" [value]="vr">{{vr}}</option>
     </select>
   </div>
-
+<br>
   <div class="form-group">
     <label for="Memory">Computer Memory: </label>
     <select class="form-control" id="Memory" required>
       <option *ngFor="let mem of Memory" [value]="mem">{{mem}}</option>
     </select>
   </div>
+
+  <br>
 
   <button type="button" class="btn btn-default" (click)="create()">Create</button>
