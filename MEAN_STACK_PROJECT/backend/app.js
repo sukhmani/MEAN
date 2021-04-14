@@ -1,21 +1,19 @@
 
 const express = require('express');
 const app = express();
+var cors = require('cors')
 const bodyParser = require('body-parser');
 app.use(bodyParser.urlencoded({ extended: true }))
 app.use(bodyParser.json())
+app.use(cors())
 
 const mongoose = require('./database/mongoose');
 const computer = require('./database/models/computer');
 const inventory = require('./database/models/inventory')
 
-var cors = require('express-cors')
+
  
-app.use(cors({
-    allowedOrigins: [
-        'github.com', 'google.com'
-    ]
-}))
+
 
 
 app.post('/create-button', (req, res,next) => {
