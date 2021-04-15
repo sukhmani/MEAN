@@ -61,27 +61,13 @@ res.header('Access-Control-Allow-Methods','GET,PUT,POST,DELETE ');
 app.use(express.urlencoded());
 app.use(express.json());
 
-/*
 
-app.get('/inventory', (req,res)=>{
-    inventory.find({})
-    .then(computer => res.send(computer))
-    .catch((error) => console.log(error));
-   
-});
-
-*/
 
 app.get('/inventory',computer.findOne);
 
 
 
-app.get('/getData', (req,res)=>{
-    res.json({
-        "statusCode":200,
-        "statusMessage":"success"
-    })
-})
+
 
 async function startServer() {
 

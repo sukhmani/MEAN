@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, Input, OnInit } from '@angular/core';
 import { create } from '../create/create';
 import { HttpClientModule } from '@angular/common/http';
 import { FormGroup, FormControl, FormBuilder} from '@angular/forms';
@@ -12,7 +12,7 @@ import { FormGroup, FormControl, FormBuilder} from '@angular/forms';
 })
 export class DeleteComponent implements OnInit {
 
-  
+  message: string = new Date().toDateString();
 
 
   constructor() { }
