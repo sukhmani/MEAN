@@ -12,11 +12,16 @@ import { FormGroup, FormControl, FormBuilder} from '@angular/forms';
 })
 export class DeleteComponent implements OnInit {
 
-  message: string = new Date().toDateString();
+  
+dMessage: string | undefined;
 
-
-  constructor() { }
-
+  constructor() { 
+setInterval(() => {
+    let currentDate = new Date();
+    this.dMessage =  currentDate.toDateString() + ' ' + currentDate.toLocaleTimeString();
+  
+  },1000);
+  }
   ngOnInit(): void {
   }
  
