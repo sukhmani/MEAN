@@ -18,6 +18,10 @@ dM: string | undefined;
   
   userName!: string;
 
+  delete(){
+    alert('Deleted');
+  }
+
   constructor() { 
 
     this.user = {
@@ -25,6 +29,7 @@ dM: string | undefined;
      
       
     };
+   
 
 setInterval(() => {
     let cDate = new Date();
