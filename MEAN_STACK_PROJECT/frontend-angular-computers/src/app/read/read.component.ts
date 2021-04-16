@@ -1,6 +1,7 @@
-import { HttpClient, HttpResponse } from '@angular/common/http';
-import { Component, OnInit } from '@angular/core';
+import { Component, Input, OnInit } from '@angular/core';
 import { create } from '../create/create';
+import { HttpClientModule } from '@angular/common/http';
+import { FormGroup, FormControl, FormBuilder} from '@angular/forms';
 
 
 @Component({
@@ -10,14 +11,21 @@ import { create } from '../create/create';
 })
 
 
-export class ReadComponent{
+export class ReadComponent implements OnInit{
+  ngOnInit(): void {
+    throw new Error('Method not implemented.');
+  }
+ 
+  Read(){
+    alert('Read');
+  }
 
   }
   
 
   /*Read() {
   
-    this.httpClient.get('http://localhost:3000/read-button', this.mod)
+    , this.mod)
     .subscribe( response => {
       console.log(response);
     });
