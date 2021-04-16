@@ -5,6 +5,7 @@ import { FormGroup, FormControl, FormBuilder} from '@angular/forms';
 
 
 
+
 @Component({
   selector: 'app-delete',
   templateUrl: './delete.component.html',
@@ -12,13 +13,23 @@ import { FormGroup, FormControl, FormBuilder} from '@angular/forms';
 })
 export class DeleteComponent implements OnInit {
 
+  user: any;
+dM: string | undefined;
   
-dMessage: string | undefined;
+  userName!: string;
 
   constructor() { 
+
+    this.user = {
+      name: this.userName,
+      title:'',
+      address:'',
+      phone:['','']
+    };
+
 setInterval(() => {
-    let currentDate = new Date();
-    this.dMessage =  currentDate.toDateString() + ' ' + currentDate.toLocaleTimeString();
+    let cDate = new Date();
+    this.dM =  cDate.toDateString() + ' ' + cDate.toLocaleTimeString();
   
   },1000);
   }
