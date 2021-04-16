@@ -10,7 +10,14 @@ import { Component, OnInit } from '@angular/core';
 
 
 export class ReadComponent implements OnInit {
+  
+ 
 
+  
+  
+  Read(){
+    alert('Data Processed');
+  }
 
   constructor() {
   
