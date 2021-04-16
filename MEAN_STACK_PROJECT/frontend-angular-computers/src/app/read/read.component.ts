@@ -1,6 +1,7 @@
-import { HttpClient } from '@angular/common/http';
+import { HttpClient, HttpResponse } from '@angular/common/http';
 import { Component, OnInit } from '@angular/core';
-// import { COMPUTERSS } from '../mock-computers';
+import { create } from '../create/create';
+
 
 @Component({
   selector: 'app-read',
