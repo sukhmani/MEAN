@@ -38,6 +38,25 @@ res.header('Access-Control-Allow-Methods','GET,PUT,POST,DELETE ');
 })
 
 
+app.get('/read-button', async (req, res,next) => {
+    res.header("Access-Control-Allow-Origin","*");
+    res.header ("Access-Control-Allow-Headers", "Origin, X-Requested-With, Content-Type,AcceptSS")
+    let getObj = {...req.body}
+    console.log(req.body);
+
+    try{
+
+        const result = await computer.updateOne(getObj);
+    
+            console.log(result);
+        }catch(e){console.log('e', e);}
+    
+
+res.header('Access-Control-Allow-Methods','GET,PUT,POST,DELETE ');
+    return res.status(200).json({message: `${getObj.name} updated successfully..`})
+
+})
+
 app.post('/update-button', async (req, res,next) => {
     res.header("Access-Control-Allow-Origin","*");
     res.header ("Access-Control-Allow-Headers", "Origin, X-Requested-With, Content-Type,AcceptSS")

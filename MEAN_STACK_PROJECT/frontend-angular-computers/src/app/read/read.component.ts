@@ -10,21 +10,27 @@ import { create } from '../create/create';
 })
 
 
-export class ReadComponent implements OnInit {
-  
- 
+export class ReadComponent{
 
+  }
   
+
+  /*Read() {
   
-  Read(){
-    alert('Data Processed');
+    this.httpClient.get('http://localhost:3000/read-button', this.mod)
+    .subscribe( response => {
+      console.log(response);
+    });
   }
 
-  constructor() {
-  
-   }
+  get diagnostic() { return JSON.stringify(this.mod); }
+
+  constructor(private httpClient: HttpClient){}
 
   ngOnInit(): void {
   }
 
 }
+*/
+
+
