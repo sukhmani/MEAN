@@ -21,10 +21,9 @@ dM: string | undefined;
   constructor() { 
 
     this.user = {
-      name: this.userName,
-      title:'',
-      address:'',
-      phone:['','']
+      name: this.userName
+     
+      
     };
 
 setInterval(() => {
