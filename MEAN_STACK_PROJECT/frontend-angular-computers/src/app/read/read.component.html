@@ -4,7 +4,15 @@
 <br>
 <br>
 
+<div class="form-group">
+    <label for="type"> Type: </label>
+    
+    <div class="col-sm-7">
+    <select class="form-control" id="type" required>
+      <option *ngFor="let ty of type" [value]="ty">{{ty}}</option>
+    </select>
+  </div>
+  </div>
 
-
-
+<br>
  <button type="button" class="btn btn-secondary" (click)="Read()">Read</button> 
