@@ -5,35 +5,45 @@
 <br>
 
 <label for="name">Computer Name: </label>
+<div class="col-sm-7">
 <input type="text" class="form-control" id="name"
        required
        [(ngModel)]="mod.name" name="name"
        #name="ngModel">
+      </div>
        <br>
 <div [hidden]="name.valid || name.pristine"
      class="alert alert-danger">
   
 </div>
+
 <br>
 <div class="form-group">
     <label for="type">Computer Type: </label>
+    <div class="col-sm-7">
     <select class="form-control" id="type" required>
       <option *ngFor="let ty of type" [value]="ty">{{ty}}</option>
     </select>
   </div>
+  </div>
+ 
 <br>
   <div class="form-group">
     <label for="Version">Computer Version: </label>
+    <div class="col-sm-7">
     <select class="form-control" id="Version" required>
       <option *ngFor="let vr of Version" [value]="vr">{{vr}}</option>
     </select>
+    </div>
   </div>
 <br>
   <div class="form-group">
     <label for="Memory">Computer Memory: </label>
+    <div class="col-sm-7">
     <select class="form-control" id="Memory" required>
       <option *ngFor="let mem of Memory" [value]="mem">{{mem}}</option>
     </select>
+    </div>
   </div>
 
   <br>
