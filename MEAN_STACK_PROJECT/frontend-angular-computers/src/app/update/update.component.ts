@@ -29,7 +29,7 @@ get diagnostic() { return JSON.stringify(this.mod); }
 constructor(private httpClient: HttpClient){}
 update() {
   
-  this.httpClient.post('http://localhost:3000/update-button', this.mod)
+  this.httpClient.put('http://localhost:3000/update-button', this.mod)
   .subscribe( response => {
     console.log(response);
   });
