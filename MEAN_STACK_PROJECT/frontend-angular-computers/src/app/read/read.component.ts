@@ -10,10 +10,10 @@ import { Read } from './read';
 })
 export class ReadComponent implements OnInit {
 
-  type = ['A', 'B',
-  'C', 'D'];
+ // type = ['A', 'B','C', 'D'];
 
-mod = new Read(this.type[0]);
+
+mod = new Read('name');
 
   constructor(private httpClient: HttpClient ) {
     
