@@ -11,9 +11,9 @@ import { create } from './create';
 })
 export class CreateComponent  {
   id = [1];
-  type = ['A', 'B',
-  'C', 'D'];
-
+ 
+  type = ['1', '2',
+  '3', '4'];
   Version = ['1', '2',
   '3', '4'];
 
@@ -21,7 +21,7 @@ export class CreateComponent  {
   '3', '4'];
   
 constructor(private httpClient: HttpClient){}
-mod = new create(9, 'name', this.Version[2], 'lkj','id');
+mod = new create(9, 'name', 'type', 'Version','Memory');
 
 submitted = false;
 

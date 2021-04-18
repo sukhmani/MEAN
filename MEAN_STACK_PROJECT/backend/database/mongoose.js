@@ -125,6 +125,7 @@ exports.index = function (req, res) {
 exports.new = function (req, res) {
   var computer = new Computer();
   computer.name = req.body.name ? req.body.name : computer.name;
+  computer.type = req.body.type ? req.body.type : computer.type;
   computer.memory = req.body.memory;
   computer.version = req.body.version;
   computer.quantity = req.body.quantity;

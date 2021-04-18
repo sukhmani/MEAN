@@ -66,7 +66,7 @@ app.put('/update-button', async (req, res,next) => {
 
     try{
 
-        const result = await computer.updateOne({name: 'a'}, postUpdateObj);
+        const result = await computer.updateOne({name: postUpdateObj.computername}, postUpdateObj);
     
             console.log(result);
         }catch(e){console.log('e', e);}
