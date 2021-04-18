@@ -19,9 +19,10 @@ export class CreateComponent  {
 
   Memory = ['1', '2',
   '3', '4'];
+  submitted: boolean = false;
   
 constructor(private httpClient: HttpClient){}
-mod = new create(9, 'name', 'type[0]', 'Version[0]','Memory[0]]
+mod = new create(9, 'name', this.type[0], this.Version[0],this.Memory[0])
 
 onSubmit() { this.submitted = true; }
 
