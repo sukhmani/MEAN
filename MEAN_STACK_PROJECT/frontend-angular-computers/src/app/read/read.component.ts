@@ -12,8 +12,7 @@ export class ReadComponent implements OnInit {
 
   type = ['A', 'B',
   'C', 'D'];
-
-  public information = "";
+  
 
 mod = new Read(this.type[0]);
 
