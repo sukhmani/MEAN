@@ -24,10 +24,13 @@ mod = new Read('name');
 
   
   Read() {
+
+    console.log(this.mod.name);
   
-    this.httpClient.get('http://localhost:3000/read-button')
+    this.httpClient.get('http://localhost:3000/read-button/'+this.mod.name)
     .subscribe( (response: any) => {
       console.log(response);
+      this.information = response.message;
     });
 }
 public information: any;
