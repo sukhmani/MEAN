@@ -16,19 +16,16 @@
      class="alert alert-danger">
   
 
- 
-     <br>
-     <div class="form-group">
-       <label for="Type">Computer Type: </label>
-       <div class="col-sm-7">
-       <select class="form-control" id="Type" required>
-         <option *ngFor="let ty of type" [value]="ty">{{ty}}</option>
-       </select>
-       </div>
-     </div>
-   <br>
 
-
+<br>
+<div class="form-group">
+    <label for="type">Computer Type: </label>
+    <div class="col-sm-7">
+    <select class="form-control" id="type" required>
+      <option *ngFor="let ty of type" [value]="ty" >{{ty}} </option>
+    </select>
+  </div>
+  </div>
  
 <br>
   <div class="form-group">
