@@ -46,14 +46,14 @@ app.get('/read-button', async (req, res,next) => {
 
     try{
 
-        const result = await computer.updateOne(getObj);
+        const result = await computer.findOne(getObj);
     
             console.log(result);
         }catch(e){console.log('e', e);}
     
 
 res.header('Access-Control-Allow-Methods','GET,PUT,POST,DELETE ');
-    return res.status(200).json({message: `${getObj.name} updated successfully..`})
+    return res.status(200).json({message: `${getObj.name} read successfully..`})
 
 })
 

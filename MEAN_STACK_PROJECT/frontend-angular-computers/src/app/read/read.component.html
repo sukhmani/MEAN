@@ -4,15 +4,18 @@
 <br>
 <br>
 
-<div class="form-group">
-    <label for="type"> Type: </label>
-    
-    <div class="col-sm-7">
-    <select class="form-control" id="type" required>
-      <option *ngFor="let ty of type" [value]="ty">{{ty}}</option>
-    </select>
-  </div>
+<label for="name">Computer Name: </label>
+<div class="col-sm-7">
+<input type="text" class="form-control" id="name"
+       required
+       [(ngModel)]="mod.name" name="name"
+       #name="ngModel">
+      
+  
   </div>
 
 <br>
  <button type="button" class="btn btn-secondary" (click)="Read()">Read</button> 
+<br>
+<p>{{information}}
+ </p>
