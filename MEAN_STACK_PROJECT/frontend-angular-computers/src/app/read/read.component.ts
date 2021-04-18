@@ -10,7 +10,7 @@ import { Read } from './read';
 })
 export class ReadComponent implements OnInit {
 
- // type = ['A', 'B','C', 'D'];
+
 
 
 mod = new Read('name');

@@ -65,11 +65,11 @@ app.put('/update-button', async (req, res,next) => {
 
     try{
 
-<<<<<<< HEAD
+
         const result = await computer.updateOne({name: postUpdateObj.computername}, postUpdateObj);
-=======
-        const result = await computer.updateOne(postUpdateObj);
->>>>>>> parent of 9afa188 (read)
+
+        
+
     
             console.log(result);
         }catch(e){console.log('e', e);}
