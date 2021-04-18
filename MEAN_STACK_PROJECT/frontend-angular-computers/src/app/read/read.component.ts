@@ -30,4 +30,5 @@ mod = new Read(this.type[0]);
       console.log(response);
     });
 }
+public information: any;
 }
