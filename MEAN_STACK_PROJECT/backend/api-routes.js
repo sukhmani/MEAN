@@ -21,6 +21,9 @@ router.route('./models/computer')
     .patch(mongoose.update)
     .put(mongoose.update)
     .delete(mongoose.delete);
+    router.route('/computer/:computername')
+    .get(mongoose.computer.data)
+  
     
 
 
