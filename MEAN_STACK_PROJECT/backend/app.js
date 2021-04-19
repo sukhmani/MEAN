@@ -49,12 +49,16 @@ app.get('/read-button/:computername', async (req, res,next) => {
         
         const result = await computer.findOne({name: getObj.computername});
             console.log(result);
+
+
+            res.header('Access-Control-Allow-Methods','GET,PUT,POST,DELETE ');
+
+            return res.status(200).json({message: `${result.name} read successfully..`});
+
         }catch(e){console.log('e', e);}
     
 
-        res.header('Access-Control-Allow-Methods','GET,PUT,POST,DELETE ');
-
-    return res.status(200).json({message: `${result.name} read successfully..`});
+      
    // return res.status(200).json({message: `${getObj.result} read successfully..`})
 
 })

@@ -22,7 +22,7 @@ mod = new Read('name');
   ngOnInit(): void {
   }
 
-  
+  information: string = "";
   Read() {
     console.log(this.mod.name);
     this.httpClient.get('http://localhost:3000/read-button/'+this.mod.name)
@@ -31,5 +31,5 @@ mod = new Read('name');
       this.information = response.message;
     });
 }
-public information: any;
+
 }
