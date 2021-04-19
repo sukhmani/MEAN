@@ -12,16 +12,14 @@ import { create } from './create';
 export class CreateComponent  {
   id = [1];
  
-  type = ''
-  Version = ['1', '2',
-  '3', '4'];
+  type = '';
+  version = '';
 
-  Memory = ['1', '2',
-  '3', '4'];
+  memory = '';
   submitted: boolean = false;
   
 constructor(private httpClient: HttpClient){}
-mod = new create(9, 'name', 'type', this.Version[0],this.Memory[0])
+mod = new create(9, 'name', 'type', 'version','memory')
 
 onSubmit() { this.submitted = true; }
 
