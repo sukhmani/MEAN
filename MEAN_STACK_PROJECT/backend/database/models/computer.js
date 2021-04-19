@@ -3,7 +3,7 @@ const mongoose = require ('mongoose');
 
 const computerSchema = new mongoose.Schema({
     name:{type: String},
-    typy:{type: String},
+    type:{type: String},
     memory:{type: String},
     version:{type: String},
     quantity:{type: Number}

@@ -12,8 +12,7 @@ import { create } from './create';
 export class CreateComponent  {
   id = [1];
  
-  type = ['1', '2',
-  '3', '4'];
+  type = ''
   Version = ['1', '2',
   '3', '4'];
 
@@ -22,7 +21,7 @@ export class CreateComponent  {
   submitted: boolean = false;
   
 constructor(private httpClient: HttpClient){}
-mod = new create(9, 'name', this.type[0], this.Version[0],this.Memory[0])
+mod = new create(9, 'name', 'type', this.Version[0],this.Memory[0])
 
 onSubmit() { this.submitted = true; }
 
