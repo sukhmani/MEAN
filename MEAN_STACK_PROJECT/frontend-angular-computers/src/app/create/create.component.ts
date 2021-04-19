@@ -19,7 +19,7 @@ export class CreateComponent  {
   submitted: boolean = false;
   
 constructor(private httpClient: HttpClient){}
-mod = new create(9, 'name', 'type', 'version','memory')
+mod = new create(2, 'name', 'type', 'version','memory')
 
 onSubmit() { this.submitted = true; }
 
