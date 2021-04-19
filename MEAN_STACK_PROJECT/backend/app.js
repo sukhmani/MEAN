@@ -38,22 +38,24 @@ res.header('Access-Control-Allow-Methods','GET,PUT,POST,DELETE ');
 })
 
 
-app.get('/read-button', async (req, res,next) => {
+app.get('/read-button/:computername', async (req, res,next) => {
     res.header("Access-Control-Allow-Origin","*");
     res.header ("Access-Control-Allow-Headers", "Origin, X-Requested-With, Content-Type,AcceptSS")
-    let getObj = {...req.body}
-    console.log(req.body);
+    let getObj = {...req.params}
+    console.log('getobj', req.params);
 
     try{
 
-        const result = await computer.findOne(getObj);
-    
+        
+        const result = await computer.findOne({name: getObj.computername});
             console.log(result);
         }catch(e){console.log('e', e);}
     
 
-res.header('Access-Control-Allow-Methods','GET,PUT,POST,DELETE ');
-    return res.status(200).json({message: `${getObj.name} read successfully..`})
+        res.header('Access-Control-Allow-Methods','GET,PUT,POST,DELETE ');
+
+    return res.status(200).json({message: `${result.name} read successfully..`});
+   // return res.status(200).json({message: `${getObj.result} read successfully..`})
 
 })
 
