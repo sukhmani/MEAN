@@ -12,6 +12,7 @@ import { ReadComponent } from './read/read.component';
 import { UpdateComponent } from './update/update.component';
 import { DeleteComponent } from './delete/delete.component'; 
 import { HttpClientInMemoryWebApiModule } from 'angular-in-memory-web-api';
+import { HomeComponent } from './home/home.component';
 
 
 @NgModule({
@@ -22,6 +23,7 @@ import { HttpClientInMemoryWebApiModule } from 'angular-in-memory-web-api';
     ReadComponent,
     UpdateComponent,
     DeleteComponent,
+    HomeComponent,
     
   ],
   imports: [
