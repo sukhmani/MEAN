@@ -12,11 +12,6 @@ const computer = require('./database/models/computer');
 const inventory = require('./database/models/inventory');
 
 
-
-
-
-
-
 app.post('/create-button', async (req, res,next) => {
     res.header("Access-Control-Allow-Origin","*");
     res.header ("Access-Control-Allow-Headers", "Origin, X-Requested-With, Content-Type,AcceptSS")
@@ -37,26 +32,20 @@ res.header('Access-Control-Allow-Methods','GET,PUT,POST,DELETE ');
     
 })
 
-
-
-
-
 app.get('/read-button/:computername', async (req, res,next) => {
     res.header("Access-Control-Allow-Origin","*");
     res.header ("Access-Control-Allow-Headers", "Origin, X-Requested-With, Content-Type,AcceptSS")
     let getObj = {...req.params}
-    console.log('getobj', req.params);
+    console.log('getObj', req.params);
 
     try{
 
         
         const result = await computer.findOne({name: getObj.computername});
             console.log(result);
-
-
             res.header('Access-Control-Allow-Methods','GET,PUT,POST,DELETE ');
 
-            return res.status(200).json({message: `${result.name} read successfully..`});
+            return res.status(200).json({message: `The computer: ${result.name} Has version ${result.version} and memory ${result.memory}`});
 
         }catch(e){console.log('e', e);}
     
@@ -77,9 +66,6 @@ app.put('/update-button', async (req, res,next) => {
 
         const result = await computer.updateOne({name: postUpdateObj.computername}, postUpdateObj);
 
-        
-
-    
             console.log(result);
         }catch(e){console.log('e', e);}
     
@@ -89,11 +75,8 @@ res.header('Access-Control-Allow-Methods','GET,PUT,POST,DELETE ');
 
 })
 
-
 app.use(express.urlencoded());
 app.use(express.json());
-
-
 
 app.get('/inventory',computer.findOne);
 

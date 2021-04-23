@@ -16,12 +16,12 @@ export class CreateComponent  {
   version = '';
 
   memory = '';
-  submitted: boolean = false;
+ 
   
 constructor(private httpClient: HttpClient){}
 mod = new create(2, 'name', 'type', 'version','memory')
 
-onSubmit() { this.submitted = true; }
+
 
 
 get diagnostic() { return JSON.stringify(this.mod); }
