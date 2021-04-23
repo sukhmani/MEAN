@@ -45,7 +45,7 @@ app.get('/read-button/:computername', async (req, res,next) => {
             console.log(result);
             res.header('Access-Control-Allow-Methods','GET,PUT,POST,DELETE ');
 
-            return res.status(200).json({message: `The computer: ${result.name} Has version ${result.version} and memory ${result.memory}`});
+            return res.status(200).json({message: `The computer ${result.name}, has version ${result.version} and memory ${result.memory}`});
 
         }catch(e){console.log('e', e);}
     
