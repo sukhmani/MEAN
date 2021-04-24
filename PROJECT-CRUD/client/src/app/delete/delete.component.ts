@@ -1,7 +1,8 @@
 import { Component, Input, OnInit } from '@angular/core';
 import { create } from '../create/create';
-import { HttpClientModule } from '@angular/common/http';
+import { HttpClient, HttpClientModule } from '@angular/common/http';
 import { FormGroup, FormControl, FormBuilder} from '@angular/forms';
+import { Delete } from './delete';
 
 
 
@@ -19,10 +20,18 @@ dM: string | undefined;
   userName!: string;
 
   delete(){
-    alert('Deleted');
-  }
+   // alert('Deleted');
 
-  constructor() { 
+    this.httpClient.delete('http://localhost:3000/delete-button'+ this.mod.name)
+    .subscribe( response => {
+      console.log(response);
+    });
+    
+
+  }
+  mod = new Delete('name');
+
+  constructor(private httpClient: HttpClient) { 
 
     this.user = {
       name: this.userName

@@ -14,7 +14,7 @@ const inventory = require('./database/models/inventory');
 
 app.post('/create-button', async (req, res,next) => {
     res.header("Access-Control-Allow-Origin","*");
-    res.header ("Access-Control-Allow-Headers", "Origin, X-Requested-With, Content-Type,AcceptSS")
+    res.header ("Access-Control-Allow-Headers", "Origin, X-Requested-With, Content-Type,Accepts")
     let postCreateObj = {...req.body}
     console.log(req.body);
 
@@ -34,7 +34,7 @@ res.header('Access-Control-Allow-Methods','GET,PUT,POST,DELETE ');
 
 app.get('/read-button/:computername', async (req, res,next) => {
     res.header("Access-Control-Allow-Origin","*");
-    res.header ("Access-Control-Allow-Headers", "Origin, X-Requested-With, Content-Type,AcceptSS")
+    res.header ("Access-Control-Allow-Headers", "Origin, X-Requested-With, Content-Type,Accepts")
     let getObj = {...req.params}
     console.log('getObj', req.params);
 
@@ -57,7 +57,7 @@ app.get('/read-button/:computername', async (req, res,next) => {
 
 app.put('/update-button', async (req, res,next) => {
     res.header("Access-Control-Allow-Origin","*");
-    res.header ("Access-Control-Allow-Headers", "Origin, X-Requested-With, Content-Type,AcceptSS")
+    res.header ("Access-Control-Allow-Headers", "Origin, X-Requested-With, Content-Type,Accepts")
     let postUpdateObj = {...req.body}
     console.log(req.body);
 
@@ -74,6 +74,37 @@ res.header('Access-Control-Allow-Methods','GET,PUT,POST,DELETE ');
     return res.status(200).json({message: `${postUpdateObj.name} updated successfully..`})
 
 })
+
+
+
+
+
+app.delete('/delete-button:computername', async (req, res,next) => {
+    res.header("Access-Control-Allow-Origin","*");
+    res.header ("Access-Control-Allow-Headers", "Origin, X-Requested-With, Content-Type,Accepts")
+    let deleteObj = {...req.params}
+    console.log(req.params);
+
+    try{
+
+
+        const result = await computer.deleteOne({name: deleteObj.computername}, deleteObj);
+
+            console.log(result);
+        }catch(e){console.log('e', e);}
+    
+
+res.header('Access-Control-Allow-Methods','GET,PUT,POST,DELETE ');
+    return res.status(200).json({message: `${deleteObj.name} deleted successfully..`})
+
+})
+
+
+
+
+
+
+
 
 app.use(express.urlencoded());
 app.use(express.json());

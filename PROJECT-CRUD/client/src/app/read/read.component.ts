@@ -13,7 +13,7 @@ export class ReadComponent implements OnInit {
 
 
 
-mod = new Read('Enter name');
+mod = new Read('name');
 
   constructor(private httpClient: HttpClient ) {
     
