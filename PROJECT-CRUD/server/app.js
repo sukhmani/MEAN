@@ -95,7 +95,7 @@ app.delete('/delete-button:computername', async (req, res,next) => {
     
 
 res.header('Access-Control-Allow-Methods','GET,PUT,POST,DELETE ');
-    return res.status(200).json({message: `${deleteObj.name} deleted successfully..`})
+    return res.status(200).json({message: `${deleteObj.computername} deleted successfully..`})
 
 })
 
