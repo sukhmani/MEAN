@@ -18,7 +18,11 @@
 <br> 
      <label >Computer Name:</label>
      <div class="col-sm-7">
-     <input id ="ComputerName">  
+   <!--  <input id ="ComputerName">  -->
+     <input type="text" class="form-control" id="name"
+       required
+       [(ngModel)]="mod.name" name="name"
+       #name="ngModel">
      </div>
         </form>
 
